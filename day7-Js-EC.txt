@@ -1,0 +1,47 @@
+JavaScript Execution context
+===========================
+
+first it executes Global context
+global context 'this' keyword represent kore
+and browser e different node env te different
+
+then memory context phase e jay
+eikhane shb variable memory te store hoy undefined hishabe
+
+for ex : val1 = undefined 
+function thakle defination add hoy
+for ex : addNum = defination
+
+then Execution Phase e jay //see below then come back
+for ex: val1 = 10
+        val2= 5
+        addNum = sandbox banay kaaj shesh e delete
+        result = 15 //func er value result variable e save kora
+
+now for function it creates a new context/sandbox
+it include same memory phase and execution phase
+for ex:  
+val1=10
+val2=5
+addNum(num1 , num2){
+    let total = num1 + num2
+    return total
+}
+let result = addNum(val1 , val2)
+er jonne
+    memory phase: val1 = undefined
+                  val2 = undefined
+                  total = undefined
+    
+    execution phase :num1 = 10
+                     num2= 5
+                     total= 15 //returns it to global execution context
+
+note: kaaj shesh hoile ei sandbox delete hoye jay ei specific function er jonne
+
+then abar jeikhane func er jone sandbox create hoise oitar porer theke kaaj shuru
+
+callstack => basically ekta stack jeikhane ektar por ekta method joma hoy last in first out
+
+
+
