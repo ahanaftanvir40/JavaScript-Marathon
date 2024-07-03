@@ -23,3 +23,20 @@ if(userLoginGoogle && userLoginEmail){
 }else{
     console.log('please sign up');
 } //print please sign up because both the condition is not true.
+
+// Nullish Coalescing Operator ?? : nul undefined
+// basically jodi null or undefined ashe tahole safety er jonno
+
+const val1 = null ?? 10
+console.log(val1); //logs 10 because null ase
+
+//if there is no null it prints the first value assigned
+
+const val2 = 5 ?? 10
+console.log(val2); //logs 5 because first value null / undefined nah
+
+
+// Ternary Operator
+const val3 = 10
+val3 === 10 ? console.log('value is 10') : console.log('value is not 10');
+// ? this means jodi eita hoy tahole eita koro na hole eita koro
