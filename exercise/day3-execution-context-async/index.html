@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 id="title">Set Interval Test</h1>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <script>
+            let changeTitle;
+            document.querySelector('#start').addEventListener('click' , ()=>{
+                 changeTitle = setInterval(function(){
+                    document.querySelector('#title').innerHTML = `I am a changed title ${Date.now()} `
+                } , 2000)
+
+
+            })
+
+            document.querySelector('#stop').addEventListener('click' , (e)=>{
+                    e.stopPropagation()
+                    clearInterval(changeTitle)
+                    console.log('Stop button Clicked');
+            })
+
+
+        </script>
+    </body>
+</html>
