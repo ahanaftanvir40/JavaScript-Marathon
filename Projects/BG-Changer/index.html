@@ -24,16 +24,21 @@
             document.querySelector('#start').addEventListener('click' , function(){
                 const body = document.querySelector('body')
                 console.log('Start Clicked');
-                RandomBg =  setInterval(function(){
+
+                if(!RandomBg){
+                    RandomBg =  setInterval(function(){
                     body.style.backgroundColor = randomColor()
                 } , 1000)
                 
+                }
+             
             })
 
             document.querySelector('#stop').addEventListener('click' , function(){
                    
                    console.log('Stop Clicked');
                    clearInterval(RandomBg)
+                   RandomBg = null
                })
 
         </script>
