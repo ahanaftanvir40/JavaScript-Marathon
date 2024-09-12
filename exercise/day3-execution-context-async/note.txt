@@ -1,0 +1,50 @@
+What is Global execution context? how javascript works? 
+
+
+=> Global execution context er duita state thake.
+1.Loading state.
+2.Execution state.
+
+Loading state e basically first of all ekta global execution context create hoy. 
+it is basically an object.
+
+so what is in this object?
+
+=> 
+first e ekta window name e global object thake. window: object
+then this name e ekta object thake jeita ei window ke point kore. this: window
+
+then ekta variable object thake jeikhane variable and function er reference memory te stored thake. and initially variable er value undefined thake.
+then lastly ekta scope chain object thake jeikhane shob scope handle hoy.
+
+
+what happens in Execution state?
+
+=> well execution state e variable gular value declared hoy.
+then function call hole kono line e function execution context start hoy.
+
+so what is this function execution context?
+
+=> it is very similar to Global execution context.
+here it also have 2 states.
+1.Loading state.
+2.Execution state.
+
+Loading state => here Global context er moton object create hoy just 'window' object thake na.
+window object er bodole 'arguments' name e object create hoy jeikhane shob parameters thake function er.
+then function er bhitorer variable er jonne object create kore memory te space nibe. global context er moton variable er value undefined hobe
+note: this object thakei jeita window ke point kore rakhe.
+
+Execution state => same as global execution context. return pelei function execution context vanish hoye jabe and global context er kache back korbe
+note: javascript e shob function kono kichu return kore. return keyword na thakle undefined return kore.
+note: multiple function i mean function er bhitore function thakle callstack e joma hote thake
+
+
+What is Async Js in short?
+
+=>
+basically Async code jeita ekta time ba interval por por run korte chai oigula ekta Task Queue e joma hote thake.
+and call stack e push hote thake and execute hote thake. ar promise ekta high priority Queue te add hote thake.
+
+
+
