@@ -17,3 +17,34 @@ new Promise((resolve, reject) => {
 }).then((user) => {
     console.log(user);
 })
+
+const promiseFive = new Promise((resolve, reject) => {
+    let error = false
+    if (!error) {
+        resolve({ username: 'JS', password: '123' })
+    }
+    if (error) {
+        reject('Error: Promise Rejected')
+    }
+})
+
+promiseFive.then((user) => {
+    console.log(user);
+    return user.username
+}).then((username) => {
+    console.log(username);
+}).catch((error) => {
+    console.log(error);
+})
+
+//alternative : we can use async await in the place of .then()
+async function consume() {
+    try {
+        const response = await promiseFive
+        console.log(response);
+    } catch (error) {
+        console.log(error);
+    }
+}
+consume()
+
