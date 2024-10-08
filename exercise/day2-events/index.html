@@ -66,3 +66,35 @@
 
 </script>
 </html>
+
+
+
+<!-- 1. Event Propagation: In the DOM, events typically propagate in two phases: capturing phase (top-down) and bubbling phase (bottom-up).
+useCapture Parameter: The third parameter of addEventListener is the useCapture boolean.
+If true, the event handler is set for the capturing phase.
+If false (or omitted), the event handler is set for the bubbling phase.
+Bubbling (default): When false, the event handler is triggered during the bubbling phase. This means the event is first captured and handled by the innermost element and then propagated to outer elements.
+Common Usage: false is the default and most common value. It's often omitted entirely in modern code, as bubbling is usually the desired behavior.
+In your specific code:
+The click event on the #images element will be handled during the bubbling phase.
+This means if you click on an image, the event will first be handled by the image element (if it has any handlers), then by its parent <li>, and finally by the #images element where this handler is attached.
+For most use cases, using false (or omitting the parameter) is appropriate. You would use true only in specific scenarios where you need to handle the event during the capturing phase, which is less common. 
+
+             | Capturing |
+               |    ↓      |
+    +----------+-----+     |
+    |    Document    |     |
+    +----------------+     |
+    |     <html>     |     |
+    +----------------+     |
+    |     <body>     |     |
+    +----------------+     |
+    |     <div>      |     |
+    +----------------+     |
+    |  Target <p>    |     |
+    +----------------+     |
+               |    ↑      |
+               | Bubbling  |
+
+
+-->
