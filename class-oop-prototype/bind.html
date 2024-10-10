@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>React</title>
+    </head>
+    <body>
+        <button>button click</button>
+    </body>
+    <script>
+    class React{
+        constructor(){
+            this.name = "React"
+            this.server = "http://localhost:3000"
+
+            document.querySelector('button').addEventListener('click' , this.handleClick.bind(this)) //here bind() tells that also add reference of the other 'this' so it doesnt replace the context it adds another context
+        }
+
+        handleClick(){
+            console.log('button Clicked');
+            console.log(this.server)
+        }
+
+        
+
+        
+
+    }
+
+    const app = new React()
+</script>
+</html>
