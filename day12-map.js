@@ -21,3 +21,4 @@ console.log(myArr);
 // we can also add filter if we want 
 let myArray_2 = numArr.map((item) => item * 10).map((item) => item +1).filter((item)=> item >=40)
 console.log(myArray_2);
+//test
