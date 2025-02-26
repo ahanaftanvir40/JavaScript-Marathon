@@ -51,3 +51,17 @@ function secondValue(anyArray){
 }
 
 secondValue(myNewArray)
+
+function Greet(type){
+    return function(name){
+        console.log(`${type}: ${name}`)
+    }
+}
+
+
+// const sayHello = Greet("Hello")
+// sayHello("Alice")
+
+Greet("Hey")("Alice")
+
+// This is a higher order function.
